@@ -9,17 +9,47 @@
 </head>
 <body>
     <div class="navbar">
-        <button class="btnRef" onclick="reload()">Refresh</button>
         <h1 class="heading">Shooting Game</h1>
+        <button class="btnRef" onclick="reload()"><i class="fa-solid fa-arrows-rotate"></i></button>
     </div>
+
     <div class="info">
-        <p>Note:</p>
+        <p><strong>Rule:</strong> Total 5 Rounds, Click the Start Game button to start the match, click the player button to shoot.</p>
     </div>
 
+    <div class="score-container">
+        <div class="score-card">
+            <div class="heading">
+                <p>Game Begins</p>
+            </div>
+            <div class="card-body">
+               <button class="btn" onclick="startGame()">Start Game</button>
+               <h2>Player 1</h2> 
+               <h2>Player 2</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <h2 class="round">Round: <span id="round">1</span></h2>
+        <div class="player1">
+            <span class="shoot1"></span>
+            <img src="shooter.webp" class="player" id="player1">Player 1</img>
+            <progress id="prog1" value="100" max="100"></progress>
+        </div>
+        <div class="player2">
+            <span class="shoot2"></span>
+            <img src="shooter.webp" class="players" id="player2">Player 2</img>
+            <progress id="prog2" value="100" max="100"></progress>
+        </div>
+    </div>
+
+    
 
 
 
 
+    <script src="https://kit.fontawesome.com/e80646ae69.js" crossorigin="anonymous"></script>
 
     <script src="script.js"></script>
 </body>

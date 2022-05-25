@@ -3,3 +3,161 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    max-width: 100vw;
+    max-height: 100vh;
+}
+img{
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    padding: 10px 20px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    color: crimson;
+    font-family: sans-serif;
+    border-radius: 8px;
+    box-shadow:  3px 3px 7px #d7d7d7;
+}
+.navbar .btnRef{
+    border: none;
+    background: transparent;
+    color: crimson;
+    font-size: 25px;
+}
+.info{
+    text-align: justify;
+    margin-top: 10px;
+    padding: 10px;
+}
+.score-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+.score-container .score-card{
+    min-width: 200px;
+    min-height: 100px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+  
+    box-shadow:  23px 23px 47px #c1c1c1,
+                 -23px -23px 47px #ffffff;   
+}
+.score-card .heading{
+    border-bottom: 1px solid #000;
+    padding: 7px;
+    font-size: 25px;
+    text-align: center;
+}
+.score-card .card-body{
+    padding: 15px 3px;
+    text-align: center;
+    
+}
+.card-body .btn{
+    font-size: 20px;
+    padding: 3px 5px;
+    border-radius: 5px;
+    outline: none;
+    margin: 0 0 5px 5px;
+    border: none;
+    background: transparent;
+   border: 1px solid crimson;
+   box-shadow:  2px 1px 2px crimson;
+   color: crimson;
+}
+.game-container{
+    width: 80%;
+    height: 500px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow:  23px 23px 47px #c1c1c1,
+                 -23px -23px 47px #ffffff;
+    padding: 30px;
+}
+
+.game-container .player,
+.game-container .players{
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    transform: scaleX(-1);
+    background: transparent;
+    
+}
+.game-container .player{
+    transform: scaleX(1);
+}
+.game-container .round{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: crimson;
+}
+.player1,
+.player2{
+    position: relative !important;
+}
+.shoot1{
+    position: absolute;
+    top: 15%;
+    left: 90%;
+    width: 10px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 0 10px 10px 0;
+    transform: rotate(5deg);
+    z-index: 1;
+    animation: shoot1 1s 1 ease;
+}
+@keyframes shoot1{
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: 65vw;
+        top: 40%;
+    }
+}
+.shoot2{
+    position: absolute;
+    top: 15%;
+    right: 90%;
+    width: 10px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-radius: 10px 0 0 10px;
+    transform: rotate(0deg);
+    z-index: 1;
+    animation: shoot2 1s 1 ease;
+}
+@keyframes shoot2{
+    0%{
+        margin-right: 0;
+    }
+    100%{
+        margin-right: 65vw;
+        top: 40%;
+    }
+}
